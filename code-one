@@ -1,0 +1,55 @@
+Notification notification = new Notification.Builder(context)  
+     .setAutoCancel(true)  
+     .setContentTitle("title")  
+     .setContentText("describe")  
+     .setContentIntent(pendingIntent)  
+     .setSmallIcon(R.drawable.ic_launcher)  
+     .setWhen(System.currentTimeMillis())  
+     .build();  
+
+
+Intent intent = new Intent(this,MainActivity); 
+PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_ONE_SHOT); 
+notification.setLatestEventInfo(context, title, message, pendingIntent);     
+manager.notify(id, notification); 
+
+Notification.Builder builder = new Notification.Builder(context) 
+      .setAutoCancel(true) 
+      .setContentTitle("title") 
+      .setContentText("describe") 
+      .setContentIntent(pendingIntent) 
+      .setSmallIcon(R.drawable.ic_launcher) 
+      .setWhen(System.currentTimeMillis()) 
+      .setOngoing(true); 
+notification=builder.getNotification(); 
+
+Notification notification = new Notification.Builder(context)  
+     .setAutoCancel(true)  
+     .setContentTitle("title")  
+     .setContentText("describe")  
+     .setContentIntent(pendingIntent)  
+     .setSmallIcon(R.drawable.ic_launcher)  
+     .setWhen(System.currentTimeMillis())  
+     .build();  
+private void showNotification(int tickerId, String content) {
+        PendingIntent pendingIntent;
+        if (tickerId != R.string.ticker_success) {
+            pendingIntent = PendingIntent.getActivity(mContext, 0, new Intent(mContext,
+                    NotesPreferenceActivity.class), 0);
+
+        } else {
+            pendingIntent = PendingIntent.getActivity(mContext, 0, new Intent(mContext,
+                    NotesListActivity.class), 0);
+        }
+
+
+        Notification.Builder builder = new Notification.Builder(mContext)
+                .setAutoCancel(true)
+                .setContentTitle(mContext.getString(R.string.app_name))
+                .setContentText(content)
+                .setContentIntent(pendingIntent)
+                .setWhen(System.currentTimeMillis())
+                .setOngoing(true);
+        Notification notification=builder.getNotification();
+        mNotifiManager.notify(GTASK_SYNC_NOTIFICATION_ID, notification);
+    }
