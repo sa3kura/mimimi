@@ -1,7 +1,7 @@
 组长：卓越 
 
-组员：李子熙 魏志高 黎骏 丘树平
-Mi Notes - Android笔记应用
+组员：李子熙 魏志高 黎骏 丘树平\\
+###Mi Notes - Android笔记应用
 Mi Notes是一个功能完整的Android笔记应用，支持本地笔记管理和Google Tasks同步功能。
 
 功能特性
