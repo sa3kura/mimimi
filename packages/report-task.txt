@@ -1,0 +1,6 @@
+projectKey=Notes
+serverUrl=http://localhost:9000
+serverVersion=10.7.0.96327
+dashboardUrl=http://localhost:9000/dashboard?id=Notes
+ceTaskId=ce9d7c58-1f94-4c76-b103-2210855f2a8a
+ceTaskUrl=http://localhost:9000/api/ce/task?id=ce9d7c58-1f94-4c76-b103-2210855f2a8a
